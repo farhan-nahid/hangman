@@ -202,10 +202,10 @@ int get_word(char game_word[], int d)
         file = fopen("medium.txt", "r");
         break;
     case 3:
-        file = fopen("easy.txt", "r");
+        file = fopen("hard.txt", "r");
         break;
     default:
-        file = fopen("easy.txt", "r");
+        file = fopen("medium.txt", "r");
         break;
     }
     if (file == NULL)
