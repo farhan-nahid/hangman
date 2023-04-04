@@ -6,17 +6,17 @@
 #include <ctype.h>
 
 #define RED "\033[0;31m"
-#define BOLDRED "\033[1;31m"
+#define BOLD_RED "\033[1;31m"
 #define GREEN "\033[0;32m"
-#define BOLDGREEN "\033[1;32m"
+#define BOLD_GREEN "\033[1;32m"
 #define YELLOW "\033[0;33m"
-#define BOLDYELLOW "\033[1;33m"
+#define BOLD_YELLOW "\033[1;33m"
 #define BLUE "\033[0;34m"
-#define BOLDBLUE "\033[1;34m"
+#define BOLD_BLUE "\033[1;34m"
 #define MAGENTA "\033[0;35m"
-#define BOLDMAGENTA "\033[1;35m"
+#define BOLD_MAGENTA "\033[1;35m"
 #define CYAN "\033[0;36m"
-#define BOLDCYAN "\033[1;36m"
+#define BOLD_CYAN "\033[1;36m"
 #define RESET "\033[0m"
 
 void welcome();
@@ -55,6 +55,8 @@ int main(int argc, char const *argv[])
             puts(YELLOW "  run \"./hangman -e\" for easy difficulty" RESET);
             puts(YELLOW "  run \"./hangman -m\" for medium difficulty" RESET);
             puts(YELLOW "  run \"./hangman -h\" for hard difficulty" RESET);
+            printf("\n\n");
+            puts(BLUE "Starting game in medium difficulty" RESET);
             break;
         }
     }
@@ -64,6 +66,8 @@ int main(int argc, char const *argv[])
         puts(YELLOW "  run \"./hangman -e\" for easy difficulty" RESET);
         puts(YELLOW "  run \"./hangman -m\" for medium difficulty" RESET);
         puts(YELLOW "  run \"./hangman -h\" for hard difficulty" RESET);
+        printf("\n\n");
+        puts(BLUE "Starting game in medium difficulty" RESET);
     }
 
     // Getting a Random Word For Hangman
@@ -79,18 +83,18 @@ int main(int argc, char const *argv[])
     check_ok = run_game(game_word, word_len);
     if (check_ok)
     {
-        printf(BOLDYELLOW "WORD: %s\n" RESET, game_word);
-        puts(BOLDGREEN "You've won the game. Run it to play again." RESET);
+        printf(BOLD_YELLOW "WORD: %s\n" RESET, game_word);
+        puts(BOLD_GREEN "You've won the game. Run it to play again." RESET);
         sleep(3);
         system("clear");
     }
     else
     {
-        printf(BOLDMAGENTA);
+        printf(BOLD_MAGENTA);
         ascii_art_hangman(0);
         printf(RESET);
-        puts(BOLDMAGENTA "You've lost the game. Try again." RESET);
-        printf(BOLDYELLOW "Correct WORD: %s\n" RESET, game_word);
+        puts(BOLD_MAGENTA "You've lost the game. Try again." RESET);
+        printf(BOLD_YELLOW "Correct WORD: %s\n" RESET, game_word);
         sleep(3);
         system("clear");
     }
@@ -182,9 +186,9 @@ void ascii_art_hangman(int ll)
 void welcome()
 {
     system("clear");
-    puts(BOLDYELLOW "▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬" RESET);
-    puts(BOLDGREEN " Welcome to the game of Hangman " RESET);
-    puts(BOLDYELLOW "▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬" RESET);
+    puts(BOLD_YELLOW "▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬" RESET);
+    puts(BOLD_GREEN " Welcome to the game of Hangman " RESET);
+    puts(BOLD_YELLOW "▬▬▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬▬" RESET);
     sleep(1);
 }
 

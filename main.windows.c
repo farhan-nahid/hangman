@@ -80,8 +80,8 @@ int main(int argc, char const *argv[])
     check_ok = run_game(game_word, word_len);
     if (check_ok)
     {
-        printf(BOLDYELLOW "WORD: %s\n" RESET, game_word);
-        puts(BOLDGREEN "You've won the game. Run it to play again." RESET);
+        printf(BOLD_YELLOW "WORD: %s\n" RESET, game_word);
+        puts(BOLD_GREEN "You've won the game. Run it to play again." RESET);
         Sleep(3000);
         system("clear");
     }
@@ -91,7 +91,7 @@ int main(int argc, char const *argv[])
         ascii_art_hangman(0);
         printf(RESET);
         puts(BOLDMAGENTA "You've lost the game. Try again." RESET);
-        printf(BOLDYELLOW "Correct WORD: %s\n" RESET, game_word);
+        printf(BOLD_YELLOW "Correct WORD: %s\n" RESET, game_word);
         Sleep(3000);
         system("clear");
     }
@@ -183,9 +183,9 @@ void ascii_art_hangman(int ll)
 void welcome()
 {
     system("clear");
-    puts(BOLDYELLOW "--------------*###*---------------" RESET);
-    puts(BOLDGREEN " Welcome to the game of Hangman " RESET);
-    puts(BOLDYELLOW "__________________________________" RESET);
+    puts(BOLD_YELLOW "--------------*###*---------------" RESET);
+    puts(BOLD_GREEN " Welcome to the game of Hangman " RESET);
+    puts(BOLD_YELLOW "__________________________________" RESET);
     Sleep(1000);
 }
 

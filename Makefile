@@ -3,4 +3,7 @@ all:
 	
 windows:
 	gcc main.windows.c -o hangman 
+
+clean:
+	rm hangman
 	
