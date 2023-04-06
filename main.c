@@ -67,7 +67,7 @@ int main(int argc, char const *argv[])
         puts(YELLOW "  run \"./hangman -m\" for medium difficulty" RESET);
         puts(YELLOW "  run \"./hangman -h\" for hard difficulty" RESET);
         printf("\n\n");
-        puts(BLUE "Starting game in medium difficulty" RESET);
+        puts(BLUE "Starting game in easy difficulty" RESET);
     }
 
     // Getting a Random Word For Hangman
@@ -85,7 +85,7 @@ int main(int argc, char const *argv[])
     {
         printf(BOLD_YELLOW "WORD: %s\n" RESET, game_word);
         puts(BOLD_GREEN "You've won the game. Run it to play again." RESET);
-        sleep(3);
+        sleep(30);
         system("clear");
     }
     else
@@ -95,7 +95,7 @@ int main(int argc, char const *argv[])
         printf(RESET);
         puts(BOLD_MAGENTA "You've lost the game. Try again." RESET);
         printf(BOLD_YELLOW "Correct WORD: %s\n" RESET, game_word);
-        sleep(3);
+        sleep(30);
         system("clear");
     }
 
